@@ -1,0 +1,37 @@
+html, body {
+  /* fonts */
+  margin: 0;  
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#quote-box {
+  background-color: purple;  
+}
+
+#text {  
+  background-color: green;
+}
+
+#author {
+  display: flex;
+  justify-content: right;
+}
+
+#div-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: space-between;
+}
+
+#new-quote {
+  background-color: beige;
+}
+
+#tweet-quote {
+  background-color: orange;
+}
+
