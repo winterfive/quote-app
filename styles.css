@@ -1,37 +1,54 @@
-html, body {
+$social-button-size: 3em;
+$text-color: white;
+$text-author-size: 0.8em;
+$quote-box-bg: rgb(107, 0, 93);
+
+body {
   /* fonts */
+  font-size: 1em;
+  color: $text-color;
   margin: 0;  
   height: 90vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;  
 }
 
 #quote-box {
-  background-color: purple;  
+  background-color: $quote-box-bg;
+  border-radius: 5em;
+  max-width: 500px;
+  padding: 3em;
 }
 
-#text {  
-  background-color: green;
+#text {
+  color: $text-color;
 }
 
 #author {
   display: flex;
   justify-content: right;
+  color: $text-color;
+  font-size: $text-author-size;
 }
 
 #div-buttons {
+	margin: 0;
   display: flex;
   flex-direction: row;
-  justify-content: right;
-  align-items: space-between;
+	border: 3px solid yellow;
 }
 
-#new-quote {
-  background-color: beige;
+#tweet-quote {}
+
+#facebook-quote {}
+
+#email-quote {}
+
+button {
+  height: 30px;
+  border-radius: 1.1em;
+  background-color: $text-color;
 }
 
-#tweet-quote {
-  background-color: orange;
-}
 
