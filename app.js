@@ -11,7 +11,6 @@ class MyComp extends React.Component {
     }
 		
 		this.getNextQuote = this.getNextQuote.bind(this);
-		//this.checkForNewQuote = this.checkForNewQuote.bind(this);
 	}
 	
 	getNextQuote() {
@@ -19,22 +18,15 @@ class MyComp extends React.Component {
       url: "https://codepen.io/CodeMoo/pen/KJEmeO.js",
       type:"get",
       dataType:'json',  
-      success: function(data){
+      success: function(data){				
         newQuote = data;
+				console.log(newQuote[9]);
       },
       error: function() {
         console.log("err");
       }
     });
   }
-	
-	/*
-	checkForNewQuote() {
-    if(newQuote.author != prevAuthor) {
-			render();
-		}
-  }
-	*/
     
 	render() {
 		return (
@@ -46,7 +38,7 @@ class MyComp extends React.Component {
 					<div id="facebook-quote"><i class="fab fa-facebook-square fa-2x"></i></div>
 					<div id="email-quote"><i class="fas fa-envelope-square fa-2x"></i></div>
 					<div id="new-quote">
-						<button onClick={this.getNewQuote}>new quote</button>
+						<button onClick={this.getNextQuote}>new quote</button>
 					</div>
 				</div>      
 			</div>
