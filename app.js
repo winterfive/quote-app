@@ -1,4 +1,6 @@
-var newQuote;
+
+
+let newQuote;
 
 class MyComp extends React.Component {
   constructor(props) {
@@ -9,7 +11,7 @@ class MyComp extends React.Component {
     }
 		
 		this.getNextQuote = this.getNextQuote.bind(this);
-		this.checkForNewQuote = this.checkForNewQuote.bind(this);
+		//this.checkForNewQuote = this.checkForNewQuote.bind(this);
 	}
 	
 	getNextQuote() {
@@ -26,27 +28,30 @@ class MyComp extends React.Component {
     });
   }
 	
+	/*
 	checkForNewQuote() {
     if(newQuote.author != prevAuthor) {
 			render();
 		}
   }
+	*/
     
 	render() {
 		return (
 			<div id="quote-box">
-				<div id="text">text</div>
-				<div id="author">author</div>
+				<div id="text">{this.state.quote}</div>
+				<div id="author">{this.state.author}</div>
 				<div id="div-buttons">
 					<div id="tweet-quote"><i class="fab fa-twitter-square fa-2x"></i></div>
 					<div id="facebook-quote"><i class="fab fa-facebook-square fa-2x"></i></div>
 					<div id="email-quote"><i class="fas fa-envelope-square fa-2x"></i></div>
 					<div id="new-quote">
-						<button>new quote</button>
+						<button onClick={this.getNewQuote}>new quote</button>
 					</div>
 				</div>      
-			</div> 
+			</div>
 		)
-		document.getElementById('app');
 	}
 }
+
+ReactDOM.render(<MyComp />, document.getElementById('app'));
