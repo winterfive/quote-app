@@ -20,7 +20,7 @@ class MyComp extends React.Component {
       dataType:'json',  
       success: function(data){				
         newQuote = data;
-				console.log(newQuote[9]);
+	console.log(newQuote[9]);
       },
       error: function() {
         console.log("err");
