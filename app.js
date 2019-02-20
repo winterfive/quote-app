@@ -1,6 +1,17 @@
+let quotes;
+let index = 0;
 
-
-let newQuote;
+$.ajax({
+      url: "https://codepen.io/CodeMoo/pen/KJEmeO.js",
+      type:"get",
+      dataType:'json',  
+      success: function(data){				
+        quotes = data;
+      },
+      error: function() {
+        console.log("err");
+      }
+    });
 
 class MyComp extends React.Component {
   constructor(props) {
@@ -14,22 +25,20 @@ class MyComp extends React.Component {
 	}
 	
 	getNextQuote() {
-    $.ajax({
-      url: "https://codepen.io/CodeMoo/pen/KJEmeO.js",
-      type:"get",
-      dataType:'json',  
-      success: function(data){				
-        newQuote = data;
-	console.log(newQuote[9]);
-      },
-      error: function() {
-        console.log("err");
-      }
-    });
+    this.setState({
+			author: quotes[index].author,
+			quote: quotes[index].quote			
+		})
+		if(index == quotes.length) {
+			index = 0;
+		} else {
+			index += 1;
+		}		
   }
     
 	render() {
 		return (
+			<div id=quote-
 			<div id="quote-box">
 				<div id="text">{this.state.quote}</div>
 				<div id="author">{this.state.author}</div>
@@ -45,5 +54,7 @@ class MyComp extends React.Component {
 		)
 	}
 }
+
+
 
 ReactDOM.render(<MyComp />, document.getElementById('app'));
