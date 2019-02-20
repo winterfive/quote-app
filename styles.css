@@ -1,6 +1,7 @@
 $social-button-size: 3em;
 $text-color: white;
-$text-author-size: 0.8em;
+$text-author-size: 1.5em;
+$text-quote-size: 1.7em;
 $quote-box-bg: rgb(107, 0, 93);
 
 body {
@@ -15,6 +16,8 @@ body {
 }
 
 #quote-box {
+	height: 300px;
+	width: 300px;
   background-color: $quote-box-bg;
   border-radius: 5em;
   max-width: 500px;
@@ -23,6 +26,7 @@ body {
 
 #text {
   color: $text-color;
+	font-size: $text-quote-size;
 }
 
 #author {
@@ -48,5 +52,3 @@ button {
   border-radius: 1.1em;
   background-color: $text-color;
 }
-
-
