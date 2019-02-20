@@ -39,8 +39,10 @@ class MyComp extends React.Component {
 	render() {
 		return (
 			<div id="quote-box">
+				<div id="text-div">
 				<div id="text">{this.state.quote}</div>
-				<div id="author">{this.state.author}</div>
+				<div id="author">- {this.state.author}</div>
+				</div>
 				<div id="div-buttons">
 					<div id="tweet-quote"><i class="fab fa-twitter-square fa-2x"></i></div>
 					<div id="facebook-quote"><i class="fab fa-facebook-square fa-2x"></i></div>
