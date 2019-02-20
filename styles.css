@@ -1,5 +1,6 @@
 $social-button-size: 3em;
 $text-color: white;
+$a-hover-color: rgb(218, 191, 214);
 $text-author-size: 1.5em;
 $text-quote-size: 1.7em;
 $quote-box-bg: rgb(107, 0, 93);
@@ -49,11 +50,13 @@ body {
 	justify-content: space-evenly;	
 }
 
-#tweet-quote {}
+a {
+	color: $text-color;
+}
 
-#facebook-quote {}
-
-#email-quote {}
+a:hover {
+	color: $a-hover-color;
+}
 
 button {
   height: 30px;
