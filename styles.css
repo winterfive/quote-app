@@ -19,9 +19,11 @@ body {
 	height: 300px;
 	width: 300px;
   background-color: $quote-box-bg;
-  border-radius: 5em;
-  max-width: 500px;
+  border-radius: 3em;
   padding: 3em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 }
 
 #text {
@@ -38,6 +40,7 @@ body {
 
 #div-buttons {
 	display: flex;
+	align-self: flex-end;
 	border: 3px solid yellow;
 }
 
