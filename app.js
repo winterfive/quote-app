@@ -1,7 +1,7 @@
 let quotes;
 let indexArr = [];
 let tweet = "";
-let quotesSize = 0;
+let quotesLen = 0;
 
 $.ajax({
 	url: "https://codepen.io/CodeMoo/pen/KJEmeO.js",
@@ -9,13 +9,16 @@ $.ajax({
 	dataType: "json",
 	success: function(data) {
 		quotes = data;
+		console.log(quotes[21]);
 	},
 	error: function() {
 		console.log("err");
 	}
 });
 
-quotesSize = quotes.length;
+console.log("got to here1");
+quotesLen = quotes.length;
+console.log("quotesLen is: " + quotesLen);
 
 class MyComp extends React.Component {
 	constructor(props) {
