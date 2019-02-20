@@ -18,8 +18,8 @@ class MyComp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      author: "name",
-      quote: "quote",
+      author: "Bill Murray",
+      quote: "The best way to teach your kids about taxes is by eating 30 percent of their ice cream.",
     }
 		
 		this.getNextQuote = this.getNextQuote.bind(this);
