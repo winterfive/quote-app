@@ -1,9 +1,9 @@
 $social-button-size: 3em;
 $text-color: white;
-$a-hover-color: rgb(218, 191, 214);
+$a-hover-color: #384a71;
 $text-author-size: 1.5em;
 $text-quote-size: 1.7em;
-$quote-box-bg: rgb(107, 0, 93);
+$quote-box-bg: #b53607;
 
 body {
   /* fonts */
@@ -60,6 +60,6 @@ a:hover {
 
 button {
   height: 30px;
-  border-radius: 1.1em;
+  border-radius: 0.4em;
   background-color: $text-color;
 }
