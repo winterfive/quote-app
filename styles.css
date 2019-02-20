@@ -26,12 +26,18 @@ body {
 	justify-content: space-around;
 }
 
+#text-div {
+	height: 250px;
+	margin-top: 10%;
+}
+
 #text {
   color: $text-color;
 	font-size: $text-quote-size;
 }
 
 #author {
+	margin-top: 10%;
   display: flex;
   justify-content: right;
   color: $text-color;
@@ -40,8 +46,7 @@ body {
 
 #div-buttons {
 	display: flex;
-	align-self: flex-end;
-	border: 3px solid yellow;
+	justify-content: space-evenly;	
 }
 
 #tweet-quote {}
