@@ -23,6 +23,7 @@ class MyComp extends React.Component {
 		this.getNextQuote = this.getNextQuote.bind(this);
 	}
 	
+	// TODO
 	componentDidMount() {
 		if(quotes != null) {
 			this.getNextQuote();
