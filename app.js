@@ -29,7 +29,7 @@ class MyComp extends React.Component {
 			author: quotes[index].author,
 			quote: quotes[index].quote			
 		})
-		if(index == quotes.length) {
+		if(index == quotes.length - 1) {
 			index = 0;
 		} else {
 			index += 1;
@@ -38,7 +38,6 @@ class MyComp extends React.Component {
     
 	render() {
 		return (
-			<div id=quote-
 			<div id="quote-box">
 				<div id="text">{this.state.quote}</div>
 				<div id="author">{this.state.author}</div>
@@ -54,7 +53,5 @@ class MyComp extends React.Component {
 		)
 	}
 }
-
-
 
 ReactDOM.render(<MyComp />, document.getElementById('app'));
