@@ -1,5 +1,8 @@
 let quotes;
 let index = 0;
+let indexArr = [];
+let tweet = "";
+let quotesSize = 0;
 
 $.ajax({
 	url: "https://codepen.io/CodeMoo/pen/KJEmeO.js",
@@ -13,6 +16,8 @@ $.ajax({
 	}
 });
 
+quotesSize = quotes.length;
+
 class MyComp extends React.Component {
   constructor(props) {
     super(props);
@@ -23,23 +28,35 @@ class MyComp extends React.Component {
 		this.getNextQuote = this.getNextQuote.bind(this);
 	}
 	
-	// TODO
-	componentDidMount() {
-		if(quotes != null) {
-			this.getNextQuote();
-		}    
+	componentDidMount = () => {
+		console.log("comp did mount");
+		getNextQuote();
  }
 	
-	getNextQuote() {
-    this.setState({
-			author: quotes[index].author,
-			quote: quotes[index].quote			
-		})
-		if(index == quotes.length - 1) {
-			index = 0;
+	getRandomIndex = () => {
+		return Math.floor(Math.random() * (quotesSize - 1));
+	}
+	
+	getNextQuote = () => {
+		
+		if(indexArr.length == quotesSize) {
+			indexArr = [];
+		}
+		
+		index = getRandomIndex();
+		console.log("index is: " + index);
+		
+		if(indexArr.includes(index)) {
+			console.log("index/quote already used");
+			getNextQuote();
 		} else {
-			index += 1;
-		}		
+			console.log("new index found");
+			quotes.concat(index);
+			this.setState({
+				author: quotes[index].author,
+				quote: quotes[index].quote			
+			})
+		}    	
   }
     
 	render() {
@@ -50,7 +67,7 @@ class MyComp extends React.Component {
 				<div id="author">- {this.state.author}</div>
 				</div>
 				<div id="div-buttons">
-					<div id="tweet-quote"><a href="twitter.com/intent/tweet"><i class="fab fa-twitter-square fa-2x"></i></a></div>
+					<div id="tweet-quote"><a href="twitter.com/intent/tweet?text=this.state.quote&20-&20{this.state.author}"><i class="fab fa-twitter-square fa-2x"></i></a></div>
 					<div id="facebook-quote"><i class="fab fa-facebook-square fa-2x"></i></div>
 					<div id="email-quote"><i class="fas fa-envelope-square fa-2x"></i></div>
 					<div id="new-quote">
