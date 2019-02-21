@@ -14,6 +14,14 @@ $.ajax({
       }
     });
 
+/*
+console.log('success', response);
+                quote = response.quote;
+                $('#quote').text('"'+quote+'"');
+                $('#author').text('- ' + response.author);
+                }
+								*/
+
 class MyComp extends React.Component {
   constructor(props) {
     super(props);
@@ -63,9 +71,13 @@ class MyComp extends React.Component {
 				<div id="author">- {this.state.author}</div>
 				</div>
 				<div id="div-buttons">
-					<div><a id="tweet-quote" href="twitter.com/intent/tweet"><i class="fab fa-twitter-square fa-2x"></i></a></div>
-					<div id="facebook-quote"><i class="fab fa-facebook-square fa-2x"></i></div>
-					<div id="email-quote"><i class="fas fa-envelope-square fa-2x"></i></div>
+					<div><a id="tweet-quote" href="https://twitter.com/intent/tweet?text={this.state.quote}{this.state.author}"><i class="fab fa-twitter-square fa-2x"></i></a></div>
+					<div>
+						<a id="facebook-quote" href="https://www.facebook.com/sharer/sharer.php?u=example.org"><i class="fab fa-facebook-square fa-2x"></i></a>
+					</div>
+					<div>
+						<a id="email-quote" href="mailto:?subject=Enjoy this quote!&body={this.state.quote}%20-%20{this.state.author}"><i class="fas fa-envelope-square fa-2x"></i></a>
+					</div>
 					<div id="new-quote">
 						<button onClick={this.getNextQuote}>new quote</button>
 					</div>
