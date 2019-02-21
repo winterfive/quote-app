@@ -26,11 +26,16 @@ class MyComp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      author: "Bill Murray",
-      quote: "The best way to teach your kids about taxes is by eating 30 percent of their ice cream.",
+      author: "none",
+      quote: "none"
     }
 		
 		this.getNextQuote = this.getNextQuote.bind(this);
+		this.tweetQuote = this.tweetQuote.bind(this);
+	}
+	
+	componenetDidMount() {
+		this.getNextQuote();
 	}
 	
 	getRandomIndex() {
@@ -62,6 +67,12 @@ class MyComp extends React.Component {
 			quote: quotes[index].quote			
 		})
   }
+	
+	tweetQuote() {
+		let tweetQuote = quotes[index].quote;
+		let tweetAuthor = quotes[index].author;
+		return tweetQuote + " - " + tweetAuthor;
+	}
     
 	render() {
 		return (
@@ -71,12 +82,20 @@ class MyComp extends React.Component {
 				<div id="author">- {this.state.author}</div>
 				</div>
 				<div id="div-buttons">
-					<div><a id="tweet-quote" href="https://twitter.com/intent/tweet?text={this.state.quote}{this.state.author}"><i class="fab fa-twitter-square fa-2x"></i></a></div>
 					<div>
-						<a id="facebook-quote" href="https://www.facebook.com/sharer/sharer.php?u=example.org"><i class="fab fa-facebook-square fa-2x"></i></a>
+						<a target='_blank' href='https://twitter.com/intent/tweet?text='/tweetQuote()/''>
+							<i className="fab fa-twitter-square fa-2x"></i>
+						</a>
 					</div>
 					<div>
-						<a id="email-quote" href="mailto:?subject=Enjoy this quote!&body={this.state.quote}%20-%20{this.state.author}"><i class="fas fa-envelope-square fa-2x"></i></a>
+						<a id="facebook-quote" href="https://www.facebook.com/sharer/sharer.php?u=example.org">
+							<i className="fab fa-facebook-square fa-2x"></i>
+						</a>
+					</div>
+					<div>
+						<a id="email-quote" href="mailto:?subject=Enjoy this quote!&body={this.state.quote}%20-%20{this.state.author}"><i className="fas fa-envelope-square fa-2x">
+							</i>
+						</a>
 					</div>
 					<div id="new-quote">
 						<button onClick={this.getNextQuote}>new quote</button>

@@ -1,40 +1,44 @@
-$social-button-size: 3em;
+$social-button-size: 4em;
 $text-color: white;
 $a-hover-color: #384a71;
 $text-author-size: 1.5em;
 $text-quote-size: 1.7em;
+$text-author-msize: 1.2em;	//mobile author text size
+$text-quote-msize: 1.4em;		//mobile quote text size
 $quote-box-bg: #b53607;
 
 body {
   /* fonts */
   font-size: 1em;
   color: $text-color;
-  margin: 0;  
-  height: 90vh;
+  margin: 0 auto;  
+  height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
 }
 
 #quote-box {
-	height: 300px;
-	width: 300px;
+	height: 350px;
+	width: 350px;
   background-color: $quote-box-bg;
   border-radius: 3em;
   padding: 3em;
+	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 }
 
 #text-div {
-	height: 250px;
+	height: 70%;
 	margin-top: 10%;
 }
 
 #text {
   color: $text-color;
 	font-size: $text-quote-size;
+	line-height: 1.3em;
 }
 
 #author {
@@ -54,13 +58,49 @@ a {
 	color: $text-color;
 }
 
-a:hover {
+button:hover {
 	color: $a-hover-color;
 }
 
+.social-button {
+	width: $social-button-size;
+	height: $social-button-size;
+	padding: 4px;
+}
+
 button {
-  height: 30px;
-  border-radius: 0.4em;
+  height: $social-button-size;
+  border-radius: 2em;
   background-color: $text-color;
 	border: 0 solid;
+}
+
+@media only screen and (max-width: 600px) {
+	
+	body {
+		align-items: flex-start;
+		margin: 10%;
+	}
+	
+	#quote-box {
+		height: 50vh;
+		width: 80%;
+		padding: 2em;
+	}
+	
+	#text {
+		font-size: $text-quote-msize;
+	}
+
+	#author {
+		font-size: $text-author-msize;
+	}
+	
+	#div-buttons {
+	flex-wrap: wrap;	
+	}
+	
+	button {
+		margin: 0.8em;
+	}
 }
