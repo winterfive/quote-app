@@ -2,6 +2,7 @@ let quotes;
 let index = 0;
 let indexArr = [];
 
+/*
 $.ajax({
       url: "https://codepen.io/CodeMoo/pen/KJEmeO.js",
       type:"get",
@@ -13,6 +14,7 @@ $.ajax({
         console.log("err");
       }
     });
+		*/
 
 /*
 console.log('success', response);
@@ -22,56 +24,73 @@ console.log('success', response);
                 }
 								*/
 
+const url = "https://codepen.io/CodeMoo/pen/KJEmeO.js";
+
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+		quotes = data;
+  })
+	.catch(error => console.log("error: " + error));
+
 class MyComp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      author: "none",
-      quote: "none"
+      author: "Mindy Kaling",
+      quote: "Sometimes you just have to put on lip gloss and pretend to be psyched."
     }
 		
 		this.getNextQuote = this.getNextQuote.bind(this);
 		this.tweetQuote = this.tweetQuote.bind(this);
 	}
 	
-	componenetDidMount() {
-		this.getNextQuote();
-	}
-	
 	getRandomIndex() {
-		return Math.floor(Math.random() * (quotes.length - 1));
+		return Math.floor(Math.random() * indexArr.length);
 	}
 	
 	getNextQuote() {
-		if(indexArr.length == quotes.length) {
-			indexArr = [];
+		// if empty, fill array w/ index values
+		if(indexArr.length == 0) {
+			let x = 0;
+			quotes.forEach(function(q) {
+				indexArr.push(x);
+				x++;
+			})
 		}
-		
-		index = this.getRandomIndex();		
+				
+		index = this.getRandomIndex();
 		
 		//check indexArr for repeated index
 		if(indexArr.includes(index)) {
-			this.getNextQuote();
-		} else {
+			let y = indexArr.indexOf(index);
+			indexArr.splice(y, 1);
 			this.setState({
-				author: quotes[index].author,
-				quote: quotes[index].quote
+				quote:quotes[index].quote,
+				author:quotes[index].author
 			})
-			indexArr.push(index);
-			console.log("index: " + index);
-			console.log("indexArr: " + indexArr);
+		} else {
+			this.getNextQuote();
 		}
-    
-		this.setState({
-			author: quotes[index].author,
-			quote: quotes[index].quote			
-		})
+		console.log("index len is: " + indexArr.length);
   }
 	
+	updateState(z) {
+		this.setState({
+			quote:quotes[z],
+			author:author[z]
+		});
+	}
+	
 	tweetQuote() {
-		let tweetQuote = quotes[index].quote;
-		let tweetAuthor = quotes[index].author;
-		return tweetQuote + " - " + tweetAuthor;
+    var url = "twitter.com";
+    let text = `${this.state.quote} - ${this.state.author}`;
+		let tag = '#quote';
+    window.open('http://twitter.com/share?url='+encodeURIComponent(url)+'&text='+encodeURIComponent(text)+'&hashtag='+encodeURIComponent(tag), '', 'top=100,left=100,width= 300px,height=500px,personalbar=0,toolbar=0,scrollbars=0,resizable=yes');
+		if (window.focus) {
+			newwindow.focus()
+		}
+		return false;
 	}
     
 	render() {
@@ -81,24 +100,14 @@ class MyComp extends React.Component {
 				<div id="text">{this.state.quote}</div>
 				<div id="author">- {this.state.author}</div>
 				</div>
-				<div id="div-buttons">
+				<div id="div-links">
 					<div>
-						<a target='_blank' href='https://twitter.com/intent/tweet?text='/tweetQuote()/''>
-							<i className="fab fa-twitter-square fa-2x"></i>
+						<a id="tweet-quote" className="social-link" onClick={this.tweetQuote}>
+							<i className="fab fa-twitter fa-3x"></i>
 						</a>
 					</div>
 					<div>
-						<a id="facebook-quote" href="https://www.facebook.com/sharer/sharer.php?u=example.org">
-							<i className="fab fa-facebook-square fa-2x"></i>
-						</a>
-					</div>
-					<div>
-						<a id="email-quote" href="mailto:?subject=Enjoy this quote!&body={this.state.quote}%20-%20{this.state.author}"><i className="fas fa-envelope-square fa-2x">
-							</i>
-						</a>
-					</div>
-					<div id="new-quote">
-						<button onClick={this.getNextQuote}>new quote</button>
+						<button id="new-quote" onClick={this.getNextQuote}>new quote</button>
 					</div>
 				</div>      
 			</div>
