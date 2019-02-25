@@ -1,29 +1,6 @@
 let quotes;
 let index = 0;
 let indexArr = [];
-
-/*
-$.ajax({
-      url: "https://codepen.io/CodeMoo/pen/KJEmeO.js",
-      type:"get",
-      dataType:'json',  
-      success: function(data){				
-        quotes = data;
-      },
-      error: function() {
-        console.log("err");
-      }
-    });
-		*/
-
-/*
-console.log('success', response);
-                quote = response.quote;
-                $('#quote').text('"'+quote+'"');
-                $('#author').text('- ' + response.author);
-                }
-								*/
-
 const url = "https://codepen.io/CodeMoo/pen/KJEmeO.js";
 
 fetch(url)
@@ -60,7 +37,6 @@ class MyComp extends React.Component {
 		}
 				
 		index = this.getRandomIndex();
-		console.log("random index is: " + index);
 		
 		this.setState({
 				quote:quotes[indexArr[index]].quote,
@@ -68,8 +44,6 @@ class MyComp extends React.Component {
 			})
 		
 		indexArr.splice(index, 1);
-		console.log(indexArr);
-		console.log("indexArr len: " + indexArr.length);
   }
 	
 	tweetQuote() {
