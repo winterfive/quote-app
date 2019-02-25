@@ -1,148 +1,99 @@
-$social-button-size: 4em;
-$text-color: white;
-$a-hover-color: #384a71;
-$text-author-size: 1.5em;
-$text-quote-size: 1.7em;
-$text-author-msize: 1.2em;	//mobile author text size
-$text-quote-msize: 1.4em;		//mobile quote text size
-$quote-box-bg: #b53607;
+let quotes;
+let index = 0;
+let indexArr = [];
+const url = "https://codepen.io/CodeMoo/pen/KJEmeO.js";
 
-body {
-  /* fonts */
-  font-size: 1em;
-  color: $text-color;
-  margin: 0 auto;  
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+fetch(url)
+	.then(response => response.json())
+	.then(data => {
+		quotes = data;
+	})
+	.catch(error => console.log("error: " + error));
 
-#quote-box {
-	height: 350px;
-	width: 350px;
-  background-color: $quote-box-bg;
-  border-radius: 3em;
-  padding: 3em;
-	margin: 0 auto;
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-}
+class MyComp extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			author: "Mindy Kaling",
+			quote:
+				"Sometimes you just have to put on lip gloss and pretend to be psyched."
+		};
 
-#quote-box:after {
-	content: '';
-	position: absolute;
-	bottom: 0; 
-	left: 40%; 
-	width: 0; 
-	height: 0; 
-	border: 80px solid transparent; 
-	border-top-color: $quote-box-bg; 
-	border-bottom: 10; 
-	border-left: 0;
-	margin-left: 60px; 
-	margin-bottom: -160px;
-}
-
-#author-portrait-div {
-	border: 2px solid green;
-	margin-top: 100px;
-}
-
-#text-div {
-	height: 70%;
-	margin-top: 10%;
-}
-
-#text {
-  color: $text-color;
-	font-size: $text-quote-size;
-	line-height: 1.3em;
-}
-
-#author {
-	margin-top: 10%;
-  display: flex;
-  justify-content: right;
-  color: $text-color;
-  font-size: $text-author-size;
-}
-
-#div-links {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-}
-
-a {
-	color: $text-color;
-	transition: color .25s ease-in-out;
-  -moz-transition: color .25s ease-in-out;
-  -webkit-transition: color .25s ease-in-out;
-}
-
-a:hover {
-	color: $a-hover-color;
-}
-
-.social-link {
-	width: $social-button-size;
-	height: $social-button-size;
-	padding: 15px;
-}
-
-button {	
-  height: $social-button-size;
-  border-radius: 2em;
-  background-color: $text-color;
-	border: 0 solid;
-	transition: color .25s ease-in-out, background-color .25s ease-in-out;
-  -moz-transition: color .25s ease-in-out, background-color .25s ease-in-out;
-  -webkit-transition: color .25s ease-in-out, background-color .25s ease-in-out;
-}
-
-button:hover {
-	background-color: $a-hover-color;
-	color: white;
-}
-
-@media only screen and (max-width: 475px) {
-	
-	body {
-		align-items: flex-start;
-		margin-top: 10%;
-		overflow-y: hidden;
-	}
-	
-	#quote-box {
-		height: 30vh;
-		width: 75%;
-		padding: 2em;
-	}
-	
-	#quote-box:after {
-		display: none;
-	}
-	
-	#author-portrait-div {
-		display: none;
-	}
-	
-	#text {
-		font-size: $text-quote-msize;
+		this.getNextQuote = this.getNextQuote.bind(this);
+		this.tweetQuote = this.tweetQuote.bind(this);
 	}
 
-	#author {
-		font-size: $text-author-msize;
+	getRandomIndex() {
+		return Math.floor(Math.random() * (indexArr.length - 1));
 	}
-	
-	#div-buttons {
-		flex-wrap: wrap;	
+
+	getNextQuote() {
+		// if empty, fill array w/ index values
+		if (indexArr.length == 0) {
+			let x = 0;
+			quotes.forEach(function(q) {
+				indexArr.push(x);
+				x++;
+			});
+		}
+
+		index = this.getRandomIndex();
+
+		this.setState({
+			quote: quotes[indexArr[index]].quote,
+			author: quotes[indexArr[index]].author
+		});
+
+		indexArr.splice(index, 1);
 	}
-	
-	button {
-		margin: 0.4em;
+
+	tweetQuote() {
+		var url = "twitter.com";
+		let text = `${this.state.quote} - ${this.state.author}`;
+		let tag = "#quote";
+		window.open(
+			"http://twitter.com/share?url=" +
+				encodeURIComponent(url) +
+				"&text=" +
+				encodeURIComponent(text) +
+				"&hashtag=" +
+				encodeURIComponent(tag),
+			"",
+			"top=100,left=100,width= 300px,height=500px,personalbar=0,toolbar=0,scrollbars=0,resizable=yes"
+		);
+		if (window.focus) {
+			newwindow.focus();
+		}
+		return false;
+	}
+
+	render() {
+		return (
+			<div id="wrapper">
+				<div id="quote-box">
+					<div id="text-div">
+						<div id="text">{this.state.quote}</div>
+						<div id="author">- {this.state.author}</div>
+					</div>
+					<div id="div-links">
+						<div>
+							<a id="tweet-quote" className="social-link" onClick={this.tweetQuote}>
+								<i className="fab fa-twitter fa-3x" />
+							</a>
+						</div>
+						<div>
+							<button id="new-quote" onClick={this.getNextQuote}>
+								new quote
+							</button>
+						</div>
+					</div>
+				</div>
+				<div id="author-portrait-div">
+					<div id="author-portrait" />
+				</div>
+			</div>
+		);
 	}
 }
+
+ReactDOM.render(<MyComp />, document.getElementById("app"));
