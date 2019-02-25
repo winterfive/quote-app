@@ -1,16 +1,13 @@
+// Quotes for Free Code Camp's Quote Machine Project
+// Feb. 2019
+// Lee Gainer
 [
       {
          "quote":"Every strike brings me closer to the next home run.","author":"Babe Ruth"},
       {
          "quote":"Life is what happens to you while you’re busy making other plans.","author":"John Lennon"},
       {
-         "quote":"The best time to plant a tree was 20 years ago. The second best time is now.","author":"Unknown"},
-      {
          "quote":"Your time is limited, so don’t waste it living someone else’s life.","author":"Steve Jobs"},
-      {
-         "quote":"Whether you think you can or you think you can’t, you’re right.","author":"Henry Ford"},
-      {
-         "quote":"The two most important days in your life are the day you are born and the day you find out why.","author":"Mark Twain"},
       {
          "quote":"The best revenge is massive success.","author":"Frank Sinatra"},
       {
@@ -26,13 +23,9 @@
       {
          "quote":"Start where you are. Use what you have.  Do what you can.","author":"Arthur Ashe"},
       {
-         "quote":"Fall seven times and stand up eight.","author":"Unknown"},
-      {
          "quote":"How wonderful it is that nobody need wait a single moment before starting to improve the world.","author":"Anne Frank"},
       {
          "quote":"When I let go of what I am, I become what I might be.","author":"Lao Tzu"},
-      {
-         "quote":"If you’re offered a seat on a rocket ship, don’t ask what seat! Just get on.","author":"Sheryl Sandberg"},
       {
          "quote":"Too many of us are not living our dreams because we are living our fears.","author":"Les Brown"},
       {
@@ -41,8 +34,6 @@
          "quote":"I didn’t fail the test. I just found 100 ways to do it wrong.","author":"Benjamin Franklin"},
       {
          "quote":"A person who never made a mistake never tried anything new.","author":" Albert Einstein"},
-      {
-         "quote":"There are no traffic jams along the extra mile.","author":"Roger Staubach"},
       {
          "quote":"It is never too late to be what you might have been.","author":"George Eliot"},
       {
@@ -95,8 +86,6 @@
       	 "quote":"He who is not courageous enough to take risks will accomplish nothing in life.","author":"Muhammad Ali"},
       {
       	 "quote":"Even if I knew that tomorrow the world would go to pieces, I would still plant my apple tree.","author":"Martin Luther King Jr"},
-      {
-      	 "quote":"Better to remain silent and be thought a fool than to speak out and remove all doubt.","author":"Abraham Lincoln"},
       {	
       	 "quote":"Never under any circumstances take a sleeping pill and a laxative on the same night.","author":"Dave Barry"},
       {
@@ -124,8 +113,10 @@
       {
          "quote":"I love deadlines. I like the whooshing sound they make as they fly by.","author":"Douglas Adams"},
       {
-          "quote":"Try not. Do or do not. There is no try.","author":"Yoda"},
+         "quote":"Try not. Do or do not. There is no try.","author":"Yoda"},
       {
-          "quote":"I have a lot of growing up to do. I realized that the other day inside my fort.","author":"Zach Galifianakis"
+         "quote":"I have a lot of growing up to do. I realized that the other day inside my fort.","author":"Zach Galifianakis"},
+      {
+         "quote":"Because remember, the talking about the thing isn’t the thing. The doing of the thing is the thing.","author":"Amy Poehler"
       }
 ]
