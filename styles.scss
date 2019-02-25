@@ -25,9 +25,30 @@ body {
   border-radius: 3em;
   padding: 3em;
 	margin: 0 auto;
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+}
+
+#quote-box:after {
+	content: '';
+	position: absolute;
+	bottom: 0; 
+	left: 50%; 
+	width: 0; 
+	height: 0; 
+	border: 80px solid transparent; 
+	border-top-color: $quote-box-bg; 
+	border-bottom: 10; 
+	border-left: 0;
+	margin-left: 60px; 
+	margin-bottom: -160px;
+}
+
+#author-portrait-div {
+	border: 2px solid green;
+	margin-top: 100px;
 }
 
 #text-div {
