@@ -117,9 +117,17 @@ button:hover {
 	}
 	
 	#quote-box {
-		height: 50vh;
-		width: 80%;
+		height: 30vh;
+		width: 75%;
 		padding: 2em;
+	}
+	
+	#quote-box:after {
+		display: none;
+	}
+	
+	#author-portrait-div {
+		display: none;
 	}
 	
 	#text {
@@ -131,10 +139,10 @@ button:hover {
 	}
 	
 	#div-buttons {
-	flex-wrap: wrap;	
+		flex-wrap: wrap;	
 	}
 	
 	button {
-		margin: 0.8em;
+		margin: 0.4em;
 	}
 }
