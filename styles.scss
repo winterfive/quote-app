@@ -47,8 +47,19 @@ body {
 }
 
 #author-portrait-div {
-	border: 2px solid green;
-	margin-top: 100px;
+	margin-top: 6em;
+	display: flex;
+	justify-content: center;
+}
+
+#author-portrait {
+	border-radius: 5em;
+	border: 2px solid blue;
+  display: block;
+  max-width:200px;
+  max-height:200px;
+  width: auto;
+  height: auto;
 }
 
 #text-div {
