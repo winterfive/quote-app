@@ -93,7 +93,7 @@ class MyComp extends React.Component {
 				</div>
 				<div id="author-portrait-div">
 					<div id="author-portrait">
-						<img src={this.state.image} alt={"images/" + this.state.author} />
+						<img src={this.state.image} alt={"portrait of" + this.state.author} />
 					</div>
 				</div>
 			</div>
