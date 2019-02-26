@@ -1,4 +1,4 @@
-$social-button-size: 4em;
+$social-button-size: 3em;
 $text-color: white;
 $a-hover-color: #384a71;
 $text-author-size: 1.5em;
@@ -133,11 +133,21 @@ button:hover {
 	}
 	
 	#quote-box:after {
-		display: none;
+		border: 60px solid transparent;  
+		margin-bottom: -115px;
+		border-top-color: $quote-box-bg; 
+		border-bottom: 10; 
+		border-left: 0;
+		margin-left: 60px;
 	}
 	
 	#author-portrait-div {
-		display: none;
+		margin-top: 60px;
+	}
+
+	#author-portrait {
+		max-width:150px;
+		max-height:150px;
 	}
 	
 	#text {
