@@ -1,7 +1,7 @@
 let quotes;
 let index = 0;
 let indexArr = [];
-const url = "https://codepen.io/CodeMoo/pen/KJEmeO.js";
+const url = "https://api.myjson.com/bins/z6c8q";
 
 fetch(url)
 	.then(response => response.json())
@@ -16,7 +16,9 @@ class MyComp extends React.Component {
 		this.state = {
 			author: "Mindy Kaling",
 			quote:
-				"Sometimes you just have to put on lip gloss and pretend to be psyched."
+				"Sometimes you just have to put on lip gloss and pretend to be psyched.",
+			image:
+				"https://github.com/winterfive/quotePage/blob/master/quotePics/kaling.jpg"
 		};
 
 		this.getNextQuote = this.getNextQuote.bind(this);
@@ -41,7 +43,8 @@ class MyComp extends React.Component {
 
 		this.setState({
 			quote: quotes[indexArr[index]].quote,
-			author: quotes[indexArr[index]].author
+			author: quotes[indexArr[index]].author,
+			image: quotes[indexArr[index]].image
 		});
 
 		indexArr.splice(index, 1);
@@ -89,7 +92,9 @@ class MyComp extends React.Component {
 					</div>
 				</div>
 				<div id="author-portrait-div">
-					<div id="author-portrait" />
+					<div id="author-portrait">
+						<img src={this.state.image} alt={"images/" + this.state.author} />
+					</div>
 				</div>
 			</div>
 		);
