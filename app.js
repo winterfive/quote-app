@@ -17,8 +17,7 @@ class MyComp extends React.Component {
 			author: "Mindy Kaling",
 			quote:
 				"Sometimes you just have to put on lip gloss and pretend to be psyched.",
-			image:
-				"https://github.com/winterfive/quotePage/blob/master/quotePics/kaling.jpg"
+			image:"https://www.dropbox.com/s/1rm7qesd9rb2izx/kaling.jpg?dl=1"
 		};
 
 		this.getNextQuote = this.getNextQuote.bind(this);
@@ -92,9 +91,7 @@ class MyComp extends React.Component {
 					</div>
 				</div>
 				<div id="author-portrait-div">
-					<div id="author-portrait">
-						<img src={this.state.image} alt={"portrait of" + this.state.author} />
-					</div>
+						<img id="author-portrait" src={this.state.image} alt={"portrait of" + this.state.author} />
 				</div>
 			</div>
 		);
