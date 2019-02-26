@@ -80,7 +80,7 @@ class MyComp extends React.Component {
 					<div id="div-links">
 						<div>
 							<a id="tweet-quote" className="social-link" onClick={this.tweetQuote}>
-								<i className="fab fa-twitter fa-3x" />
+								<i className="fab fa-twitter fa-2x" />
 							</a>
 						</div>
 						<div>
@@ -91,7 +91,7 @@ class MyComp extends React.Component {
 					</div>
 				</div>
 				<div id="author-portrait-div">
-						<img id="author-portrait" src={this.state.image} alt={"portrait of" + this.state.author} />
+						<img id="author-portrait" src={this.state.image} alt={"portrait of " + this.state.author} />
 				</div>
 			</div>
 		);
