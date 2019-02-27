@@ -3,120 +3,119 @@
 // Lee Gainer
 [
       {
-         "quote":"Every strike brings me closer to the next home run.","author":"Babe Ruth"},
+         "quote":"Every strike brings me closer to the next home run.","author":"Babe Ruth","image":"https://www.dropbox.com/s/x4v8yq2lywz0hwk/ruth.jpg?dl=1"},
       {
-         "quote":"Life is what happens to you while you’re busy making other plans.","author":"John Lennon"},
+         "quote":"Life is what happens to you while you’re busy making other plans.","author":"John Lennon","image":"https://www.dropbox.com/s/5kzhvofm6wdqzrq/lennon.jpg?dl=1"},
       {
-         "quote":"Your time is limited, so don’t waste it living someone else’s life.","author":"Steve Jobs"},
+         "quote":"Your time is limited, so don’t waste it living someone else’s life.","author":"Steve Jobs","image":"https://www.dropbox.com/s/g510h5zpkmxbx8u/jobs.png?dl=1"},
       {
-         "quote":"The best revenge is massive success.","author":"Frank Sinatra"},
+         "quote":"The best revenge is massive success.","author":"Frank Sinatra","image":"https://www.dropbox.com/s/r70dyx6v5bntdu8/sinatra.jpg?dl=1"},
       {
-         "quote":"Life shrinks or expands in proportion to one’s courage.","author":"Anais Nin"},
+         "quote":"Life shrinks or expands in proportion to one’s courage.","author":"Anais Nin","image":"https://www.dropbox.com/s/ri2rgk6ad5z1u3r/Nin.jpg?dl=1"},
       {
-         "quote":"There is only one way to avoid criticism: do nothing, say nothing, and be nothing.","author":"Aristotle"},
+         "quote":"There is only one way to avoid criticism: do nothing, say nothing, and be nothing.","author":"Aristotle","image":"https://www.dropbox.com/s/tfeh1qij3scxund/Aristotle.jpg?dl=1"},
       {
-         "quote":"The only person you are destined to become is the person you decide to be.","author":"Ralph Waldo Emerson"},
+         "quote":"The only person you are destined to become is the person you decide to be.","author":"Ralph Waldo Emerson","image":"https://www.dropbox.com/s/bb2tgw4x0b5ndj9/Emerson.jpg?dl=1"},
       {
          "quote":"Believe you can and you’re halfway there.","author":"Theodore Roosevelt"},
       {
-         "quote":"Everything you’ve ever wanted is on the other side of fear.","author":"George Addair"},
+         "quote":"Everything you’ve ever wanted is on the other side of fear.","author":"George Addair","image":"https://www.dropbox.com/s/euvo9p7lqkf30ji/Addair.jpeg?dl=1"},
       {
          "quote":"Start where you are. Use what you have.  Do what you can.","author":"Arthur Ashe"},
       {
-         "quote":"How wonderful it is that nobody need wait a single moment before starting to improve the world.","author":"Anne Frank"},
+         "quote":"How wonderful it is that nobody need wait a single moment before starting to improve the world.","author":"Anne Frank","image":"https://www.dropbox.com/s/r3lxxpymry30589/Frank.jpg?dl=1"},
       {
-         "quote":"When I let go of what I am, I become what I might be.","author":"Lao Tzu"},
+         "quote":"When I let go of what I am, I become what I might be.","author":"Lao Tzu","image":"https://www.dropbox.com/s/sd9jfh2wt3ew0za/Tzu.png?dl=1"},
       {
-         "quote":"Too many of us are not living our dreams because we are living our fears.","author":"Les Brown"},
+         "quote":"Too many of us are not living our dreams because we are living our fears.","author":"Les Brown","image":"https://www.dropbox.com/s/hd8s1lzxawqurjx/Brown.jpg?dl=1"},
       {
-         "quote":"If you want to lift yourself up, lift up someone else.","author":"Booker T. Washington"},
+         "quote":"If you want to lift yourself up, lift up someone else.","author":"Booker T. Washington","image":"https://www.dropbox.com/s/cpun358ym5k2s8d/washington.jpg?dl=1"},
       {
-         "quote":"I didn’t fail the test. I just found 100 ways to do it wrong.","author":"Benjamin Franklin"},
+         "quote":"I didn’t fail the test. I just found 100 ways to do it wrong.","author":"Benjamin Franklin","image":"https://www.dropbox.com/s/h57vhwc3yt8oe0k/franklin.gif?dl=1"},
       {
-         "quote":"A person who never made a mistake never tried anything new.","author":" Albert Einstein"},
+         "quote":"A person who never made a mistake never tried anything new.","author":" Albert Einstein","image":"https://www.dropbox.com/s/3m4e0p13o5d7789/einstein.jpg?dl=1"},
       {
-         "quote":"It is never too late to be what you might have been.","author":"George Eliot"},
+         "quote":"It is never too late to be what you might have been.","author":"George Eliot","image":"https://www.dropbox.com/s/e8halwq6jc39wfi/Eliot.jpg?dl=1"},
       {
-         "quote":"I would rather die of passion than of boredom.","author":"Vincent van Gogh"},
+         "quote":"I would rather die of passion than of boredom.","author":"Vincent van Gogh","image":"https://www.dropbox.com/s/3j2k7e589y5l2u8/vanGogh.jpg?dl=1"},
       {
-         "quote":"Build your own dreams, or someone else will hire you to build theirs.","author":"Farrah Gray"},
+         "quote":"Build your own dreams, or someone else will hire you to build theirs.","author":"Farrah Gray","image":"https://www.dropbox.com/s/21t7xbu77uznqua/Gray.jpg?dl=1"},
       {
-         "quote":"Education costs money.  But then so does ignorance.","author":"Sir Claus Moser"},
+         "quote":"Education costs money.  But then so does ignorance.","author":"Sir Claus Moser","image":"https://www.dropbox.com/s/4c2abddh5n6r8cx/Moser.jpg?dl=1"},
       {
-         "quote":"I have learned over the years that when one’s mind is made up, this diminishes fear.","author":"Rosa Parks"},
+         "quote":"I have learned over the years that when one’s mind is made up, this diminishes fear.","author":"Rosa Parks","image":"https://www.dropbox.com/s/uu0uae3ka37752r/parks.jpg?dl=1"},
       {
-         "quote":"It does not matter how slowly you go as long as you do not stop.","author":"Confucius"},
+         "quote":"It does not matter how slowly you go as long as you do not stop.","author":"Confucius","image":"https://www.dropbox.com/s/rab4m0ee9b43fgp/Confucius.jpg?dl=1"},
       {
-         "quote":"Remember that not getting what you want is sometimes a wonderful stroke of luck.","author":"Dalai Lama"},
+         "quote":"Remember that not getting what you want is sometimes a wonderful stroke of luck.","author":"Dalai Lama","image":"https://www.dropbox.com/s/czgws31i85mn72e/Lama.jpg?dl=1"},
       {
-         "quote":"You can’t use up creativity.  The more you use, the more you have.","author":"Maya Angelou"},
+         "quote":"You can’t use up creativity.  The more you use, the more you have.","author":"Maya Angelou","image":"https://www.dropbox.com/s/xjpkbvzy2mv962f/Angelou.jpg?dl=1"},
       {
-         "quote":"Dreaming, after all, is a form of planning.","author":"Gloria Steinem"},
+         "quote":"Dreaming, after all, is a form of planning.","author":"Gloria Steinem","image":"https://www.dropbox.com/s/7xkzdhyi1bzzkcg/steinem.jpg?dl=1"},
       {
-         "quote":"You may be disappointed if you fail, but you are doomed if you don’t try.","author":"Beverly Sills"},
+         "quote":"You may be disappointed if you fail, but you are doomed if you don’t try.","author":"Beverly Sills","image":"https://www.dropbox.com/s/wvtuv86cmsmcwdf/sills.jpg?dl=1"},
       {
-         "quote":"Remember no one can make you feel inferior without your consent.","author":"Eleanor Roosevelt"},
+         "quote":"Remember no one can make you feel inferior without your consent.","author":"Eleanor Roosevelt","image":"https://www.dropbox.com/s/ir50vzm0xzlb4ld/e-roosevelt.jpg?dl=1"},
       {
-         "quote":"When everything seems to be going against you, remember that the airplane takes off against the wind, not with it.","author":"Henry Ford"},
+         "quote":"When everything seems to be going against you, remember that the airplane takes off against the wind, not with it.","author":"Henry Ford","image":"https://www.dropbox.com/s/taqx1ey3smi02t1/ford.jpg?dl=1"},
       {
-         "quote":"It’s not the years in your life that count. It’s the life in your years.","author":"Abraham Lincoln"},
+         "quote":"It’s not the years in your life that count. It’s the life in your years.","author":"Abraham Lincoln","image":"https://www.dropbox.com/s/y4n78usmzi3tdc2/Lincoln.jpg?dl=1"},
       {
-         "quote":"Nothing is impossible, the word itself says, “I’m possible!”","author":"Audrey Hepburn"},
+         "quote":"Nothing is impossible, the word itself says, “I’m possible!”","author":"Audrey Hepburn","image":"https://www.dropbox.com/s/92yvyd4ap5vubr6/Hepburn.jpg?dl=1"},
       {
-      	 "quote":"If I stop to kick every barking dog I am not going to get where I’m going.","author":"Jackie Joyner-Kersee"},
+      	 "quote":"If I stop to kick every barking dog I am not going to get where I’m going.","author":"Jackie Joyner-Kersee","image":"https://www.dropbox.com/s/sqiwyv2mgxs52bc/Kersee.jpg?dl=1"},
       {
-      	 "quote":"I’d rather regret the things I’ve done than regret the things I haven’t done.","author":"Lucille Ball"},
+      	 "quote":"I’d rather regret the things I’ve done than regret the things I haven’t done.","author":"Lucille Ball","image":"https://www.dropbox.com/s/3vn71gftxyctofh/ball.jpg?dl=1"},
       {
-      	 "quote":"If you don’t like the road you’re walking, start paving another one.","author":"Dolly Parton"},
+      	 "quote":"If you don’t like the road you’re walking, start paving another one.","author":"Dolly Parton","image":"https://www.dropbox.com/s/boidjjzkxdptciz/Parton.jpg?dl=1"},
       {
-      	 "quote":"Done is better than perfect.","author":"Sheryl Sandberg"},
+      	 "quote":"Done is better than perfect.","author":"Sheryl Sandberg","image":"https://www.dropbox.com/s/vr1ujcq1ibgjx1f/Sandberg.jpg?dl=1"},
       {
-      	 "quote":"What you do makes a difference, and you have to decide what kind of difference you want to make.","author":"Jane Goodall"},
+      	 "quote":"What you do makes a difference, and you have to decide what kind of difference you want to make.","author":"Jane Goodall","image":"https://www.dropbox.com/s/a7s1ncj7f00p64b/Goodall.jpg?dl=1"},
       {
-      	 "quote":"A surplus of effort could overcome a deficit of confidence.","author":"Sonia Sotomayor"},
+      	 "quote":"A surplus of effort could overcome a deficit of confidence.","author":"Sonia Sotomayor","image":"https://www.dropbox.com/s/v9rk7cs62px24ox/Sotomayor.jpg?dl=1"},
       {
-      	 "quote":"If you don’t get out of the box you’ve been raised in, you won’t understand how much bigger the world is.","author":"Angelina Jolie"},
+      	 "quote":"If you don’t get out of the box you’ve been raised in, you won’t understand how much bigger the world is.","author":"Angelina Jolie","image":"https://www.dropbox.com/s/xaegrk5hqpof6vh/Jolie.jpg?dl=1"},
       {
-      	 "quote":"You can’t be that kid standing at the top of the waterslide, overthinking it. You have to go down the chute.","author":"Tina Fey"},
+      	 "quote":"You can’t be that kid standing at the top of the waterslide, overthinking it. You have to go down the chute.","author":"Tina Fey","image":"https://www.dropbox.com/s/mgcr7yvokvmt2lm/fey.jpg?dl=1"},
       {
-      	 "quote":"It’s not the absence of fear, it’s overcoming it. Sometimes you’ve got to blast through and have faith.","author":"Emma Watson"},
+      	 "quote":"It’s not the absence of fear, it’s overcoming it. Sometimes you’ve got to blast through and have faith.","author":"Emma Watson","image":"https://www.dropbox.com/s/3y7dkuduoc1hgc8/Watson.jpg?dl=1"},
       {
-      	 "quote":"It’s not the load that breaks you down, it’s the way you carry it.","author":"Lena Horne"},
+      	 "quote":"It’s not the load that breaks you down, it’s the way you carry it.","author":"Lena Horne","image":"https://www.dropbox.com/s/yuzxdhrw7999d86/Horne.jpg?dl=1"},
       {
-      	 "quote":"He who is not courageous enough to take risks will accomplish nothing in life.","author":"Muhammad Ali"},
+      	 "quote":"He who is not courageous enough to take risks will accomplish nothing in life.","author":"Muhammad Ali","image":"https://www.dropbox.com/s/z94qf50ymcm9e8o/Ali.jpeg?dl=1"},
       {
-      	 "quote":"Even if I knew that tomorrow the world would go to pieces, I would still plant my apple tree.","author":"Martin Luther King Jr"},
+      	 "quote":"Even if I knew that tomorrow the world would go to pieces, I would still plant my apple tree.","author":"Martin Luther King Jr","image":"https://www.dropbox.com/s/2l4zfeerezthot2/kingjr.jpg?dl=1"},
       {	
-      	 "quote":"Never under any circumstances take a sleeping pill and a laxative on the same night.","author":"Dave Barry"},
+      	 "quote":"Never under any circumstances take a sleeping pill and a laxative on the same night.","author":"Dave Barry","image":"https://www.dropbox.com/s/gvouddk2xh94mdt/Barry.jpg?dl=1"},
       {
-      	 "quote":"As long as people will accept crap, it will be financially profitable to dispense it.","author":"Dick Cavett"},
+      	 "quote":"As long as people will accept crap, it will be financially profitable to dispense it.","author":"Dick Cavett","image":"https://www.dropbox.com/s/qm2sinla4z68nes/Cavett.jpg?dl=1"},
       {
-      	 "quote":"Have you ever noticed that anybody driving slower than you is an idiot, and anyone going faster than you is a maniac?","author":"George Carlin"},
+      	 "quote":"Have you ever noticed that anybody driving slower than you is an idiot, and anyone going faster than you is a maniac?","author":"George Carlin","image":"https://www.dropbox.com/s/232bp0akx82mtnu/Carlin.jpg?dl=1"},
       {
-      	 "quote":"I always wanted to be somebody, but now I realize I should have been more specific.","author":"Lily Tomlin"},
+      	 "quote":"I always wanted to be somebody, but now I realize I should have been more specific.","author":"Lily Tomlin","image":"https://www.dropbox.com/s/02ezx7xnz72bbpa/Tomlin.jpg?dl=1"},
       {
-      	 "quote":"Worrying is like paying a debt you don’t owe.","author":"Mark Twain"},
+      	 "quote":"Worrying is like paying a debt you don’t owe.","author":"Mark Twain","image":"https://www.dropbox.com/s/vrpxu53hsbvo1ps/Twain.jpg?dl=1"},
       {
-      	 "quote":"I want my children to have all the things I couldn’t afford. Then I want to move in with them.","author":"Phyllis Diller"},
+      	 "quote":"I want my children to have all the things I couldn’t afford. Then I want to move in with them.","author":"Phyllis Diller","image":"https://www.dropbox.com/s/532698gp0llw80v/Diller.jpg?dl=1"},
       {
-         "quote":"Why do they call it rush hour when nothing moves?","author":"Robin Williams"},
+         "quote":"Why do they call it rush hour when nothing moves?","author":"Robin Williams","image":"https://www.dropbox.com/s/yozf90tyheagu3u/williams.jpg?dl=1"},
       {
-      	 "quote":"My psychiatrist told me I was crazy and I said I want a second opinion. He said okay, you’re ugly too.","author":"Rodney Dangerfield"},
+      	 "quote":"My psychiatrist told me I was crazy and I said I want a second opinion. He said okay, you’re ugly too.","author":"Rodney Dangerfield","image":"https://www.dropbox.com/s/kxs1adw16cwb1sa/Dangerfield.jpg?dl=1"},
       {
-      	 "quote":"I intend to live forever. So far, so good.","author":"Steven Wright"},
+      	 "quote":"I intend to live forever. So far, so good.","author":"Steven Wright","image":"https://www.dropbox.com/s/1a0q9m0jestnp3t/Wright.jpg?dl=1"},
       {
-      	 "quote":"The road to success is dotted with many tempting parking spaces.","author":"Will Rogers"},
+      	 "quote":"The road to success is dotted with many tempting parking spaces.","author":"Will Rogers","image":"https://www.dropbox.com/s/io4o3atvrrqufis/Rogers.jpg?dl=1"},
       {
-      	 "quote":"Mother Teresa didn’t walk around complaining about her thighs – she had shit to do.","author":"Sarah Silverman"},
+      	 "quote":"Mother Teresa didn’t walk around complaining about her thighs – she had shit to do.","author":"Sarah Silverman","image":"https://www.dropbox.com/s/hz2wb5eal2odsll/silverman.jpg?dl=1"},
       { 
-      	 "quote":"It does not do well to dwell on dreams and forget to live.","author":"Professor Dumbledore"},
+      	 "quote":"It does not do well to dwell on dreams and forget to live.","author":"Professor Dumbledore","image":"https://www.dropbox.com/s/js5nhe7w68dktts/dumbledore.png?dl=1"},
       {
-         "quote":"I love deadlines. I like the whooshing sound they make as they fly by.","author":"Douglas Adams"},
+         "quote":"I love deadlines. I like the whooshing sound they make as they fly by.","author":"Douglas Adams","image":"https://www.dropbox.com/s/tfnxplv65xcpmip/adams.jpg?dl=1"},
       {
-         "quote":"Try not. Do or do not. There is no try.","author":"Yoda"},
+         "quote":"Try not. Do or do not. There is no try.","author":"Yoda","image":"https://www.dropbox.com/s/u6s8duj3bob9juz/yoda.jpg?dl=1"},
       {
-         "quote":"I have a lot of growing up to do. I realized that the other day inside my fort.","author":"Zach Galifianakis"},
+         "quote":"I have a lot of growing up to do. I realized that the other day inside my fort.","author":"Zach Galifianakis","image":"https://www.dropbox.com/s/7r5gjnucov2dbri/Galifianakis.jpg?dl=1"},
       {
-         "quote":"Because remember, the talking about the thing isn’t the thing. The doing of the thing is the thing.","author":"Amy Poehler"
-      }
+         "quote":"Because remember, the talking about the thing isn’t the thing. The doing of the thing is the thing.","author":"Amy Poehler","image":"https://www.dropbox.com/s/2c810x65zear9ee/Poehler.jpg?dl=1"}
 ]
