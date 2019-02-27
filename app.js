@@ -1,7 +1,12 @@
+// Quote Machine
+// Feb 2019
+// Lee Gainer
+
 let quotes;
 let index = 0;
 let indexArr = [];
-const url = "https://api.myjson.com/bins/z6c8q";
+const url = "https://api.myjson.com/bins/mt93e";
+let imageArr = [];
 
 fetch(url)
 	.then(response => response.json())
@@ -27,6 +32,21 @@ class MyComp extends React.Component {
 	getRandomIndex() {
 		return Math.floor(Math.random() * (indexArr.length - 1));
 	}
+	
+	componentDidMount() {
+		let x;
+		quotes.forEach(function(x) {
+			if(quotes != null) {
+				// fetch image
+				fetch(quotes.image)
+					.then(data => {
+						x = data;
+					})
+				.then(imageArr.push(x))
+				.catch(error => console.log("image fetch error: " + error));
+			}
+		})
+	}				
 
 	getNextQuote() {
 		// if empty, fill array w/ index values
@@ -43,7 +63,7 @@ class MyComp extends React.Component {
 		this.setState({
 			quote: quotes[indexArr[index]].quote,
 			author: quotes[indexArr[index]].author,
-			image: quotes[indexArr[index]].image
+			image: imageArr[indexArr[index]]
 		});
 
 		indexArr.splice(index, 1);
