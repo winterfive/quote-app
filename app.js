@@ -6,22 +6,21 @@ let quotes;
 let index = 0;
 let indexArr = [];
 const url = "https://api.myjson.com/bins/xpqq2";
-let nextAuthor, nextQuote = "";
-let nextImage;
+let nextAuthor, nextQuote, nextImage = "";
 
 class MyComp extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			author: "Mindy Kaling",
-			quote:
-				"Sometimes you just have to put on lip gloss and pretend to be psyched.",
-			image:"https://www.dropbox.com/s/1rm7qesd9rb2izx/kaling.jpg?dl=1"
+			quote: "Sometimes you just have to put on lip gloss and pretend to be psyched.",
+			image: "https://www.dropbox.com/s/1rm7qesd9rb2izx/kaling.jpg?dl=1"
 		};
 
 		this.getQuote = this.getQuote.bind(this);
 		this.tweetQuote = this.tweetQuote.bind(this);
 		this.updateState = this.updateState.bind(this);
+		this.getQuote = this.getQuote.bind(this);
 	}
 	
 	componentDidMount() {
@@ -62,9 +61,31 @@ class MyComp extends React.Component {
 		index = this.getRandomIndex();
 		
 		nextQuote: quotes[indexArr[index]].quote;
+		//console.log(quotes[indexArr[index]].quote);
 		nextAuthor: quotes[indexArr[index]].author;
-		nextImage = fetch(quotes[indexArr[index]].image
-		// TODO
+		//console.log(quotes[indexArr[index]].author);
+		nextImage: quotes[indexArr[index]].image;
+		//console.log(quotes[indexArr[index]].image);
+		
+		/*
+		picUrl = quotes[indexArr[index]].image;
+		
+		console.log(picUrl);
+		
+		fetch(picUrl)
+		.then(function(response) {
+      if (response.status !== 200) {
+        console.log('Image Fetch Error: ' + response.status);
+        return;
+      }
+      response.blob().then(function(pic) {
+        nextImage = pic;
+      });
+    })
+  .catch(function(err) {
+    console.log('Image Catch Error : ' + err);
+  });	
+	*/
 											
 		// Remove current index value from indexArr
 		indexArr.splice(index, 1);
@@ -87,7 +108,9 @@ class MyComp extends React.Component {
 			x++;
 		});
 	}
-
+	
+	// Opens share tweet window
+	// void -> void
 	tweetQuote() {
 		var url = "twitter.com";
 		let text = `${this.state.quote} - ${this.state.author}`;
@@ -109,6 +132,7 @@ class MyComp extends React.Component {
 	}
 
 	render() {
+		// TODO break this up into seperate components
 		return (
 			<div id="wrapper">
 				<div id="quote-box">
