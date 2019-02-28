@@ -28,7 +28,7 @@ class MyComp extends React.Component {
 		fetch(url)
   	.then(function(response) {
       if (response.status !== 200) {
-        console.log('Json fetch Error: ' + response.status);
+        console.log('Json Fetch Error: ' + response.status);
         return;
       }
       response.json().then(function(data) {
@@ -53,19 +53,16 @@ class MyComp extends React.Component {
 			this.fillArray();
 		}
 		
-		this.updateState();
 		this.getNextValues();
+		this.updateState();
 	}
 	
 	getNextValues() {
 		index = this.getRandomIndex();
 		
-		nextQuote: quotes[indexArr[index]].quote;
-		//console.log(quotes[indexArr[index]].quote);
-		nextAuthor: quotes[indexArr[index]].author;
-		//console.log(quotes[indexArr[index]].author);
-		nextImage: quotes[indexArr[index]].image;
-		//console.log(quotes[indexArr[index]].image);
+		nextQuote = quotes[indexArr[index]].quote;
+		nextAuthor = quotes[indexArr[index]].author;
+		nextImage = quotes[indexArr[index]].image;
 		
 		/*
 		picUrl = quotes[indexArr[index]].image;
