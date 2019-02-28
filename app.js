@@ -14,7 +14,7 @@ class MyComp extends React.Component {
 		this.state = {
 			author: "Mindy Kaling",
 			quote:
-				"Sometimes you just have to put on lip gloss and pretend to be psyched.",
+				"\"Sometimes you just have to put on lip gloss and pretend to be psyched.\"",
 			image:"https://www.dropbox.com/s/1rm7qesd9rb2izx/kaling.jpg?dl=1"
 		};
 
@@ -52,7 +52,7 @@ class MyComp extends React.Component {
 		index = this.getRandomIndex();
 
 		this.setState({
-			quote: quotes[indexArr[index]].quote,
+			quote: '"' + quotes[indexArr[index]].quote + '"',
 			author: quotes[indexArr[index]].author,
 			image: quotes[indexArr[index]].image
 		});
