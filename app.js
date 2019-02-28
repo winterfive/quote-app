@@ -20,56 +20,36 @@ class MyComp extends React.Component {
 
 		this.getNextQuote = this.getNextQuote.bind(this);
 		this.tweetQuote = this.tweetQuote.bind(this);
+
 		this.preloadImages = this.preloadImages.bind(this);
+
 	}
 	
 	componentDidMount() {
 		console.log("did mount");
-		fetch(url)
-		.then(function(response) {
-			if(!response.ok) {
-				throw Error(response.statusText);
-			}
-			return response.json();
-		})
-		.then(function(responseAsJson) {
-			quotes = responseAsJson;
-			console.log("quotes test: " + quotes[45].quote);
-		})
-		.catch(error => console.log("fetch error: " + error));
 	}
+		
+	asynch getImages() {
+		console.log("getting images");
+		quotes.forEach(function(x) {
+			let pic = await fetch(quotes.image);
+			if(!response.ok) {
+					throw Error("fetching image: " + response.statusText);
+				} else {
+					let newPic = response.blob();
+					imageArr.push(newPic);
+				};		
+			})
+		}
 
 	getRandomIndex() {
 		return Math.floor(Math.random() * (indexArr.length - 1));
 	}	
 	
-	preloadImages() {	
-		console.log("preload got called");
-		let x;
-		quotes.forEach(function(x) {
-			// fetch image
-			fetch(quotes.image)
-			.then(function(response) {
-				if(!response.ok) {
-					throw Error(response.statusText);
-				}
-			return response.blob()
-			})
-			.then(function(image){
-				imageArr.push(image)
-			})
-			.catch(error => console.log("image fetch error: " + error));
-		})
-	}		
-
 	getNextQuote() {
 		// if empty, fill array w/ index values
 		if (indexArr.length == 0) {
-			let x = 0;
-			quotes.forEach(function(q) {
-				indexArr.push(x);
-				x++;
-			});
+			this.fillArray();
 		}
 
 		index = this.getRandomIndex();
@@ -81,6 +61,14 @@ class MyComp extends React.Component {
 		});
 
 		indexArr.splice(index, 1);
+	}
+	
+	fillArray() {
+		let x = 0;
+		quotes.forEach(function(q) {
+			indexArr.push(x);
+			x++;
+		});
 	}
 
 	tweetQuote() {
