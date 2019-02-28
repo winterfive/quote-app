@@ -5,7 +5,7 @@
 let quotes;
 let index = 0;
 let indexArr = [];
-const url = "https://api.myjson.com/bins/mt93e";
+const url = "https://api.myjson.com/bins/xpqq2";
 let imageArr = [];
 
 class MyComp extends React.Component {
@@ -20,32 +20,29 @@ class MyComp extends React.Component {
 
 		this.getNextQuote = this.getNextQuote.bind(this);
 		this.tweetQuote = this.tweetQuote.bind(this);
-
-		this.preloadImages = this.preloadImages.bind(this);
-
 	}
 	
 	componentDidMount() {
-		console.log("did mount");
-	}
-		
-	asynch getImages() {
-		console.log("getting images");
-		quotes.forEach(function(x) {
-			let pic = await fetch(quotes.image);
-			if(!response.ok) {
-					throw Error("fetching image: " + response.statusText);
-				} else {
-					let newPic = response.blob();
-					imageArr.push(newPic);
-				};		
-			})
-		}
+		fetch(url)
+  	.then(function(response) {
+      if (response.status !== 200) {
+        console.log('Json fetch Error: ' + response.status);
+        return;
+      }
+      response.json().then(function(data) {
+        quotes = data;
+      });
+    }
+  )
+  .catch(function(err) {
+    console.log('Fetch Error : ' + err);
+  });
+	}	
 
 	getRandomIndex() {
 		return Math.floor(Math.random() * (indexArr.length - 1));
-	}	
-	
+	}
+
 	getNextQuote() {
 		// if empty, fill array w/ index values
 		if (indexArr.length == 0) {
