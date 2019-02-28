@@ -19,8 +19,9 @@ class MyComp extends React.Component {
 			image:"https://www.dropbox.com/s/1rm7qesd9rb2izx/kaling.jpg?dl=1"
 		};
 
-		this.getNextQuote = this.getNextQuote.bind(this);
+		this.getQuote = this.getQuote.bind(this);
 		this.tweetQuote = this.tweetQuote.bind(this);
+		this.updateState = this.updateState.bind(this);
 	}
 	
 	componentDidMount() {
@@ -53,7 +54,7 @@ class MyComp extends React.Component {
 			this.fillArray();
 		}
 		
-		this.setState();
+		this.updateState();
 		this.getNextValues();
 	}
 	
@@ -69,7 +70,7 @@ class MyComp extends React.Component {
 		indexArr.splice(index, 1);
 	}
 	
-	setState() {
+	updateState() {
 		this.setState({
 			quote: nextQuote,
 			author: nextAuthor,
