@@ -1,11 +1,12 @@
 // Quote Machine 
 // Feb 2019
 // Lee Gainer
+// https://github.com/winterfive/quotePage
 
 let quotes;
 let index = 0;
 let indexArr = [];
-const url = "https://api.myjson.com/bins/xpqq2";
+const url = "https://api.myjson.com/bins/144nau";
 let nextAuthor, nextQuote, nextImage = "";
 
 class MyComp extends React.Component {
