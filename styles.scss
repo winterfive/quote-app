@@ -56,9 +56,9 @@ body {
 #author-portrait {
 	border-radius: 7em;
   display: block;
-  max-width:200px;
-  max-height:200px;
-  width: auto;
+  max-width:190px;
+  max-height:190px;
+  max-width: auto;
   height: auto;
 }
 
@@ -128,18 +128,18 @@ button:hover {
 	}
 	
 	#quote-box {
-		height: 30vh;
+		height: 40vh;
 		width: 75%;
 		padding: 2em;
 	}
 	
 	#quote-box:after {
-		border: 60px solid transparent;  
-		margin-bottom: -115px;
+		border: 50px solid transparent;  
+		margin-bottom: -100px;
 		border-top-color: $quote-box-bg; 
 		border-bottom: 10; 
 		border-left: 0;
-		margin-left: 60px;
+		margin-left: 50px;
 	}
 	
 	#author-portrait-div {
