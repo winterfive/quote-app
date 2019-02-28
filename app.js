@@ -3,10 +3,12 @@
 // Lee Gainer
 
 let quotes;
-let index = 0;
+let index, nextIndex = 0;
 let indexArr = [];
 const url = "https://api.myjson.com/bins/xpqq2";
 let imageArr = [];
+let nextAuthor, nextQuote = "";
+let nextImage;
 
 class MyComp extends React.Component {
 	constructor(props) {
@@ -14,7 +16,7 @@ class MyComp extends React.Component {
 		this.state = {
 			author: "Mindy Kaling",
 			quote:
-				"\"Sometimes you just have to put on lip gloss and pretend to be psyched.\"",
+				"Sometimes you just have to put on lip gloss and pretend to be psyched.",
 			image:"https://www.dropbox.com/s/1rm7qesd9rb2izx/kaling.jpg?dl=1"
 		};
 
@@ -23,6 +25,7 @@ class MyComp extends React.Component {
 	}
 	
 	componentDidMount() {
+		// get json
 		fetch(url)
   	.then(function(response) {
       if (response.status !== 200) {
@@ -39,11 +42,13 @@ class MyComp extends React.Component {
   });
 	}	
 
+	// Returns random int between 0 and current indexArr length
+	// void -> int
 	getRandomIndex() {
 		return Math.floor(Math.random() * (indexArr.length - 1));
 	}
 
-	getNextQuote() {
+	getQuote() {
 		// if empty, fill array w/ index values
 		if (indexArr.length == 0) {
 			this.fillArray();
@@ -51,15 +56,24 @@ class MyComp extends React.Component {
 
 		index = this.getRandomIndex();
 
-		this.setState({
-			quote: '"' + quotes[indexArr[index]].quote + '"',
-			author: quotes[indexArr[index]].author,
-			image: quotes[indexArr[index]].image
-		});
+		
 
 		indexArr.splice(index, 1);
 	}
 	
+	getNextValues () {
+	}
+	
+	setState(index) {
+		this.setState({
+			quote: quotes[indexArr[index]].quote,
+			author: quotes[indexArr[index]].author,
+			image: quotes[indexArr[index]].image
+		});
+	}
+	
+	// Fills index number array with values from 0 to quotes length
+	// void -> void	
 	fillArray() {
 		let x = 0;
 		quotes.forEach(function(q) {
@@ -103,7 +117,7 @@ class MyComp extends React.Component {
 							</a>
 						</div>
 						<div>
-							<button id="new-quote" onClick={this.getNextQuote}>
+							<button id="new-quote" onClick={this.getQuote}>
 								new quote
 							</button>
 						</div>
