@@ -1,15 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Slabo+22px');
+
 $social-button-size: 3em;
 $text-color: white;
 $a-hover-color: #384a71;
-$text-author-size: 1.5em;
-$text-quote-size: 1.7em;
+$text-author-size: 1.3em;
+$text-quote-size: 1.6em;
 $text-author-msize: 1.1em;	//mobile author text size
 $text-quote-msize: 1.3em;		//mobile quote text size
 $quote-box-bg: #b53607;
 
 body {
-  /* fonts */
-  font-size: 1em;
+  font-family: 'Slabo 22px', serif;
   color: $text-color;
   margin: 0 auto;  
   height: 100vh;
@@ -57,7 +58,9 @@ body {
 	border-radius: 7em;
   display: block;
   max-width:190px;
-  width: auto;
+  max-height:190px;
+  max-width: auto;
+  height: auto;
 }
 
 #text-div {
@@ -115,6 +118,10 @@ button {
 button:hover {
 	background-color: $a-hover-color;
 	color: white;
+}
+
+button:active {
+  transform: translateY(2px);
 }
 
 @media only screen and (max-width: 475px) {
