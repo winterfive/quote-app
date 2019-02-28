@@ -1,32 +1,36 @@
 // Quote Machine 
 // Feb 2019
 // Lee Gainer
+// https://github.com/winterfive/quotePage
+
 
 let quotes;
 let index = 0;
 let indexArr = [];
-const url = "https://api.myjson.com/bins/xpqq2";
-let imageArr = [];
+const url = "https://api.myjson.com/bins/144nau";
+let nextAuthor, nextQuote, nextImage = "";
 
 class MyComp extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			author: "Mindy Kaling",
-			quote:
-				"\"Sometimes you just have to put on lip gloss and pretend to be psyched.\"",
-			image:"https://www.dropbox.com/s/1rm7qesd9rb2izx/kaling.jpg?dl=1"
+			quote: "Sometimes you just have to put on lip gloss and pretend to be psyched.",
+			image: "https://www.dropbox.com/s/1rm7qesd9rb2izx/kaling.jpg?dl=1"
 		};
 
-		this.getNextQuote = this.getNextQuote.bind(this);
+		this.getQuote = this.getQuote.bind(this);
 		this.tweetQuote = this.tweetQuote.bind(this);
+		this.updateState = this.updateState.bind(this);
+		this.getQuote = this.getQuote.bind(this);
 	}
 	
 	componentDidMount() {
+		// get json
 		fetch(url)
   	.then(function(response) {
       if (response.status !== 200) {
-        console.log('Json fetch Error: ' + response.status);
+        console.log('Json Fetch Error: ' + response.status);
         return;
       }
       response.json().then(function(data) {
@@ -39,27 +43,63 @@ class MyComp extends React.Component {
   });
 	}	
 
+	// Returns random int between 0 and current indexArr length
+	// void -> int
 	getRandomIndex() {
 		return Math.floor(Math.random() * (indexArr.length - 1));
 	}
 
-	getNextQuote() {
+	getQuote() {
 		// if empty, fill array w/ index values
 		if (indexArr.length == 0) {
 			this.fillArray();
 		}
-
+		
+		this.getNextValues();
+		this.updateState();
+	}
+	
+	getNextValues() {
 		index = this.getRandomIndex();
-
-		this.setState({
-			quote: '"' + quotes[indexArr[index]].quote + '"',
-			author: quotes[indexArr[index]].author,
-			image: quotes[indexArr[index]].image
-		});
-
+		
+		nextQuote = quotes[indexArr[index]].quote;
+		nextAuthor = quotes[indexArr[index]].author;
+		nextImage = quotes[indexArr[index]].image;
+		
+		/*
+		picUrl = quotes[indexArr[index]].image;
+		
+		console.log(picUrl);
+		
+		fetch(picUrl)
+		.then(function(response) {
+      if (response.status !== 200) {
+        console.log('Image Fetch Error: ' + response.status);
+        return;
+      }
+      response.blob().then(function(pic) {
+        nextImage = pic;
+      });
+    })
+  .catch(function(err) {
+    console.log('Image Catch Error : ' + err);
+  });	
+	*/
+											
+		// Remove current index value from indexArr
 		indexArr.splice(index, 1);
 	}
 	
+	updateState() {
+		this.setState({
+			quote: nextQuote,
+			author: nextAuthor,
+			image: nextImage			
+		});
+	}
+	
+	// Fills index number array with values from 0 to quotes length
+	// void -> void	
 	fillArray() {
 		let x = 0;
 		quotes.forEach(function(q) {
@@ -67,7 +107,9 @@ class MyComp extends React.Component {
 			x++;
 		});
 	}
-
+	
+	// Opens share tweet window
+	// void -> void
 	tweetQuote() {
 		var url = "twitter.com";
 		let text = `${this.state.quote} - ${this.state.author}`;
@@ -89,11 +131,12 @@ class MyComp extends React.Component {
 	}
 
 	render() {
+		// TODO break this up into seperate components
 		return (
 			<div id="wrapper">
 				<div id="quote-box">
 					<div id="text-div">
-						<div id="text">{this.state.quote}</div>
+						<div id="text">"{this.state.quote}"</div>
 						<div id="author">- {this.state.author}</div>
 					</div>
 					<div id="div-links">
@@ -103,7 +146,7 @@ class MyComp extends React.Component {
 							</a>
 						</div>
 						<div>
-							<button id="new-quote" onClick={this.getNextQuote}>
+							<button id="new-quote" onClick={this.getQuote}>
 								new quote
 							</button>
 						</div>

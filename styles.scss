@@ -1,30 +1,33 @@
+@import url("https://fonts.googleapis.com/css?family=Slabo+22px");
+
 $social-button-size: 3em;
 $text-color: white;
 $a-hover-color: #384a71;
-$text-author-size: 1.5em;
-$text-quote-size: 1.7em;
-$text-author-msize: 1.1em;	//mobile author text size
-$text-quote-msize: 1.3em;		//mobile quote text size
+$text-author-size: 1.3em;
+$text-quote-size: 1.6em;
+$text-author-msize: 1.1em; //mobile author text size
+$text-quote-msize: 1.3em; //mobile quote text size
 $quote-box-bg: #b53607;
 
 body {
-  /* fonts */
-  font-size: 1em;
-  color: $text-color;
-  margin: 0 auto;  
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-	background: white url("https://www.dropbox.com/s/vi36kb52y5xqtf5/dark-triangles.png?dl=1") repeat;
+	font-family: "Slabo 22px", serif;
+	color: $text-color;
+	margin: 0 auto;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: white
+		url("https://www.dropbox.com/s/vi36kb52y5xqtf5/dark-triangles.png?dl=1")
+		repeat;
 }
 
 #quote-box {
 	height: 350px;
 	width: 350px;
-  background-color: $quote-box-bg;
-  border-radius: 3em;
-  padding: 3em;
+	background-color: $quote-box-bg;
+	border-radius: 3em;
+	padding: 3em;
 	margin: 0 auto;
 	position: relative;
 	display: flex;
@@ -33,17 +36,17 @@ body {
 }
 
 #quote-box:after {
-	content: '';
+	content: "";
 	position: absolute;
-	bottom: 0; 
-	left: 40%; 
-	width: 0; 
-	height: 0; 
-	border: 80px solid transparent; 
-	border-top-color: $quote-box-bg; 
-	border-bottom: 10; 
+	bottom: 0;
+	left: 40%;
+	width: 0;
+	height: 0;
+	border: 80px solid transparent;
+	border-top-color: $quote-box-bg;
+	border-bottom: 10;
 	border-left: 0;
-	margin-left: 60px; 
+	margin-left: 60px;
 	margin-bottom: -160px;
 }
 
@@ -55,9 +58,11 @@ body {
 
 #author-portrait {
 	border-radius: 7em;
-  display: block;
-  max-width:190px;
-  width: auto;
+	display: block;
+	max-width: 190px;
+	max-height: 190px;
+	max-width: auto;
+	height: auto;
 }
 
 #text-div {
@@ -66,17 +71,17 @@ body {
 }
 
 #text {
-  color: $text-color;
+	color: $text-color;
 	font-size: $text-quote-size;
 	line-height: 1.3em;
 }
 
 #author {
 	margin-top: 10%;
-  display: flex;
-  justify-content: right;
-  color: $text-color;
-  font-size: $text-author-size;
+	display: flex;
+	justify-content: right;
+	color: $text-color;
+	font-size: $text-author-size;
 }
 
 #div-links {
@@ -87,9 +92,9 @@ body {
 
 a {
 	color: $text-color;
-	transition: color .25s ease-in-out;
-  -moz-transition: color .25s ease-in-out;
-  -webkit-transition: color .25s ease-in-out;
+	transition: color 0.25s ease-in-out;
+	-moz-transition: color 0.25s ease-in-out;
+	-webkit-transition: color 0.25s ease-in-out;
 }
 
 a:hover {
@@ -102,14 +107,15 @@ a:hover {
 	padding: 15px;
 }
 
-button {	
-  height: $social-button-size;
-  border-radius: 2em;
-  background-color: $text-color;
+button {
+	height: $social-button-size;
+	border-radius: 2em;
+	background-color: $text-color;
 	border: 0 solid;
-	transition: color .25s ease-in-out, background-color .25s ease-in-out;
-  -moz-transition: color .25s ease-in-out, background-color .25s ease-in-out;
-  -webkit-transition: color .25s ease-in-out, background-color .25s ease-in-out;
+	box-shadow: 0 2px $a-hover-color;
+	transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+	-moz-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+	-webkit-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
 }
 
 button:hover {
@@ -117,38 +123,42 @@ button:hover {
 	color: white;
 }
 
+button:active {
+	transform: translateY(2px);
+	box-shadow: none;
+}
+
 @media only screen and (max-width: 475px) {
-	
 	body {
 		align-items: flex-start;
 		margin-top: 10%;
 		overflow-y: hidden;
 	}
-	
+
 	#quote-box {
 		height: 40vh;
 		width: 75%;
 		padding: 2em;
 	}
-	
+
 	#quote-box:after {
-		border: 50px solid transparent;  
+		border: 50px solid transparent;
 		margin-bottom: -100px;
-		border-top-color: $quote-box-bg; 
-		border-bottom: 10; 
+		border-top-color: $quote-box-bg;
+		border-bottom: 10;
 		border-left: 0;
 		margin-left: 50px;
 	}
-	
+
 	#author-portrait-div {
 		margin-top: 60px;
 	}
 
 	#author-portrait {
-		max-width:150px;
-		max-height:150px;
+		max-width: 150px;
+		max-height: 150px;
 	}
-	
+
 	#text {
 		font-size: $text-quote-msize;
 	}
@@ -156,11 +166,11 @@ button:hover {
 	#author {
 		font-size: $text-author-msize;
 	}
-	
+
 	#div-buttons {
-		flex-wrap: wrap;	
+		flex-wrap: wrap;
 	}
-	
+
 	button {
 		margin: 0.4em;
 	}
