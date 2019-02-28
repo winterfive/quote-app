@@ -3,10 +3,9 @@
 // Lee Gainer
 
 let quotes;
-let index, nextIndex = 0;
+let index = 0;
 let indexArr = [];
 const url = "https://api.myjson.com/bins/xpqq2";
-let imageArr = [];
 let nextAuthor, nextQuote = "";
 let nextImage;
 
@@ -53,22 +52,28 @@ class MyComp extends React.Component {
 		if (indexArr.length == 0) {
 			this.fillArray();
 		}
-
-		index = this.getRandomIndex();
-
 		
-
+		this.setState();
+		this.getNextValues();
+	}
+	
+	getNextValues() {
+		index = this.getRandomIndex();
+		
+		nextQuote: quotes[indexArr[index]].quote;
+		nextAuthor: quotes[indexArr[index]].author;
+		nextImage = fetch(quotes[indexArr[index]].image
+		// TODO
+											
+		// Remove current index value from indexArr
 		indexArr.splice(index, 1);
 	}
 	
-	getNextValues () {
-	}
-	
-	setState(index) {
+	setState() {
 		this.setState({
-			quote: quotes[indexArr[index]].quote,
-			author: quotes[indexArr[index]].author,
-			image: quotes[indexArr[index]].image
+			quote: nextQuote,
+			author: nextAuthor,
+			image: nextImage			
 		});
 	}
 	
