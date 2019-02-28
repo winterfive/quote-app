@@ -134,7 +134,7 @@ class MyComp extends React.Component {
 			<div id="wrapper">
 				<div id="quote-box">
 					<div id="text-div">
-						<div id="text">{this.state.quote}</div>
+						<div id="text">"{this.state.quote}"</div>
 						<div id="author">- {this.state.author}</div>
 					</div>
 					<div id="div-links">
