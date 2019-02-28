@@ -110,6 +110,7 @@ button {
   border-radius: 2em;
   background-color: $text-color;
 	border: 0 solid;
+	box-shadow: 0 2px black;
 	transition: color .25s ease-in-out, background-color .25s ease-in-out;
   -moz-transition: color .25s ease-in-out, background-color .25s ease-in-out;
   -webkit-transition: color .25s ease-in-out, background-color .25s ease-in-out;
@@ -122,6 +123,7 @@ button:hover {
 
 button:active {
   transform: translateY(2px);
+	box-shadow: none;
 }
 
 @media only screen and (max-width: 475px) {
