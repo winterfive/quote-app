@@ -3,6 +3,7 @@
 // Lee Gainer
 // https://github.com/winterfive/quotePage
 
+
 let quotes;
 let index = 0;
 let indexArr = [];
