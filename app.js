@@ -20,31 +20,13 @@ class MyComp extends React.Component {
 
 		this.getNextQuote = this.getNextQuote.bind(this);
 		this.tweetQuote = this.tweetQuote.bind(this);
-		//this.preloadImages = this.preloadImages.bind(this);
-		this.getData = this.getData.bind(this);
-		this.getImages = this.getImages.bind(this);
-		this.fillArray = this.fillArray.bind(this);
+
+		this.preloadImages = this.preloadImages.bind(this);
+
 	}
 	
 	componentDidMount() {
 		console.log("did mount");
-		this.getData();	
-	}
-	
-	asynch getData() {
-		console.log("getting data");
-		const response = await fetch(url);
-		if(!response.ok) {
-				throw Error(response.statusText);
-			} else {
-				return response;
-			}
-		
-		quotes = await response.json();
-		
-		if(quotes != null) {
-			this.getImages();
-		}
 	}
 		
 	asynch getImages() {
@@ -64,27 +46,6 @@ class MyComp extends React.Component {
 		return Math.floor(Math.random() * (indexArr.length - 1));
 	}	
 	
-	/*
-	preloadImages() {	
-		console.log("preload got called");
-		let x;
-		quotes.forEach(function(x) {
-			// fetch image
-			fetch(quotes.image)
-			.then(function(response) {
-				if(!response.ok) {
-					throw Error(response.statusText);
-				}
-			return response.blob()
-			})
-			.then(function(image){
-				imageArr.push(image)
-			})
-			.catch(error => console.log("image fetch error: " + error));
-		})
-	}	
-	*/
-
 	getNextQuote() {
 		// if empty, fill array w/ index values
 		if (indexArr.length == 0) {
