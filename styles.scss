@@ -23,16 +23,16 @@ body {
 }
 
 #quote-box {
-	height: 350px;
 	width: 350px;
+	height: 350px;
+	max-height: 350px;
+	max-width: 350px;
 	background-color: $quote-box-bg;
 	border-radius: 3em;
 	padding: 3em;
 	margin: 0 auto;
 	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
+	display: inline-block;
 }
 
 #quote-box:after {
@@ -61,8 +61,6 @@ body {
 	display: block;
 	max-width: 190px;
 	max-height: 190px;
-	max-width: auto;
-	height: auto;
 }
 
 #text-div {
@@ -136,7 +134,7 @@ button:active {
 	}
 
 	#quote-box {
-		height: 40vh;
+		height: 35vh;
 		width: 75%;
 		padding: 2em;
 	}
@@ -155,8 +153,8 @@ button:active {
 	}
 
 	#author-portrait {
-		max-width: 150px;
-		max-height: 150px;
+		max-width: 130px;
+		max-height: 130px;
 	}
 
 	#text {
