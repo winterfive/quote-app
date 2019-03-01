@@ -8,18 +8,19 @@ $text-quote-size: 1.6em;
 $text-author-msize: 1.1em; //mobile author text size
 $text-quote-msize: 1.3em; //mobile quote text size
 $quote-box-bg: #b53607;
+$background-img: "https://www.dropbox.com/s/vi36kb52y5xqtf5/dark-triangles.png?dl=1";
 
 body {
 	font-family: "Slabo 22px", serif;
 	color: $text-color;
-	margin: 0 auto;
-	height: 100vh;
+	margin-top: 10%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background: white
-		url("https://www.dropbox.com/s/vi36kb52y5xqtf5/dark-triangles.png?dl=1")
+		url($background-img)
 		repeat;
+	overflow: hidden;
 }
 
 #quote-box {
@@ -128,9 +129,8 @@ button:active {
 
 @media only screen and (max-width: 475px) {
 	body {
-		align-items: flex-start;
+		align-items: center;
 		margin-top: 10%;
-		overflow-y: hidden;
 	}
 
 	#quote-box {
