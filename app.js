@@ -3,11 +3,10 @@
 // Lee Gainer
 // https://github.com/winterfive/quotePage
 
-
 let quotes;
 let index = 0;
 let indexArr = [];
-const url = "https://api.myjson.com/bins/144nau";
+const url = "https://api.myjson.com/bins/e5iy6";
 let nextAuthor, nextQuote, nextImage = "";
 
 class MyComp extends React.Component {
