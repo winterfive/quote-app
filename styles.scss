@@ -127,6 +127,7 @@ button:active {
 	box-shadow: none;
 }
 
+// Mobile
 @media only screen and (max-width: 475px) {
 	body {
 		align-items: center;
@@ -135,8 +136,8 @@ button:active {
 
 	#quote-box {
 		height: 35vh;
-		width: 75%;
-		padding: 2em;
+		width: 300px;
+		padding: 1.5em;
 		display: flex;
 		flex-direction: column;
 	}
@@ -161,11 +162,21 @@ button:active {
 
 	#text {
 		font-size: $text-quote-msize;
+		line-height: 1.3em;
+	}
+	
+	#text-div {
+	height: 75%;
+	margin-top: 5%;
 	}
 
 	#author {
-		font-size: $text-author-msize;
-	}
+	margin-top: 3%;
+	display: flex;
+	justify-content: right;
+	color: $text-color;
+	font-size: $text-author-msize;
+}
 
 	#div-buttons {
 		flex-wrap: wrap;
