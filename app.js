@@ -64,26 +64,6 @@ class MyComp extends React.Component {
 		nextQuote = quotes[indexArr[index]].quote;
 		nextAuthor = quotes[indexArr[index]].author;
 		nextImage = quotes[indexArr[index]].image;
-		
-		/*
-		picUrl = quotes[indexArr[index]].image;
-		
-		console.log(picUrl);
-		
-		fetch(picUrl)
-		.then(function(response) {
-      if (response.status !== 200) {
-        console.log('Image Fetch Error: ' + response.status);
-        return;
-      }
-      response.blob().then(function(pic) {
-        nextImage = pic;
-      });
-    })
-  .catch(function(err) {
-    console.log('Image Catch Error : ' + err);
-  });	
-	*/
 											
 		// Remove current index value from indexArr
 		indexArr.splice(index, 1);
